@@ -1,11 +1,9 @@
-name: Upload CDN Fontend Image to ghcr.io
+name: Upload Image to ghcr.io
 run-name: Uploading ${{ github.actor }}'s changes. [Version ${{  github.ref_name }}] - "${{ github.event.head_commit.message }}"
 
 on:
         workflow_dispatch:
         push:
-                tags:
-                        - 'v*'
 
 env:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
