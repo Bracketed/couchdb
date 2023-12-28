@@ -4,7 +4,8 @@ run-name: Uploading ${{ github.actor }}'s changes. [Version ${{  github.ref_name
 on:
         workflow_dispatch:
         push:
-
+        schedule:
+                - cron: '0 0 * * 0'
 env:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: true
 
